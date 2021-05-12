@@ -1,7 +1,8 @@
 package com.mycompany.ud4_te1;
 
 /**
- *
+ * Clase CCuenta, genera los metodos necesarios para la gestion del objeto CCuenta en la clase principal Main.
+ * @version 5
  * @author Edurne Leite
  */
 public class CCuenta {
@@ -21,7 +22,7 @@ public class CCuenta {
 
     /**
      * El metodo setNombre modifica el atribtuo nombre de la clase CCuenta
-     * @param nombre the nombre to set
+     * @param nombre nombre a poner en el atributo nombre, tipo string
      * 
      */
     public void setNombre(String nombre) {
@@ -38,15 +39,15 @@ public class CCuenta {
 
     /**
      * El metodo setCuenta modifica el atribtuo cuenta de la clase CCuenta
-     * @param cuenta the cuenta to set
+     * @param cuenta cuanta a poner en el atributo cuenta, tipo string
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * El metodo setSaldo consulta el atributo saldo de la clase CCuenta y lo devuleve como parametro.
-     * @param saldo the saldo to set
+     * El metodo setSaldo modifica el atribtuo saldo de la clase CCuenta.
+     * @param saldo, saldo a poner en el atributo saldo, tipo double.
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
@@ -61,8 +62,8 @@ public class CCuenta {
     }
 
     /**
-     * El metodo setTipoInteres consulta el atributo tipo interes de la clase CCuenta y lo devuleve como parametro.
-     * @param tipoInteres the tipoInteres to set
+     * El metodo setTipoInteres modifica el atribtuo tipo interes de la clase CCuenta.
+     * @param tipoInteres, tipo interes a a poner en el atributo, tipo double.
      */
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
@@ -70,10 +71,10 @@ public class CCuenta {
 
     /**
      *
-     * @param nom, atributo nombre de la clase CCuenta
-     * @param cue, atributo cuenta de la clase CCuenta
-     * @param sal, atributo saldo de la clase CCuenta
-     * @param tipo, atributo tipoInteres de la clase CCuenta
+     * @param nom, atributo nombre de la clase CCuenta, tipo string
+     * @param cue, atributo cuenta de la clase CCuenta, tipo string
+     * @param sal, atributo saldo de la clase CCuenta, tipo double
+     * @param tipo, atributo tipoInteres de la clase CCuenta, tipo double
      */
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
@@ -83,7 +84,7 @@ public class CCuenta {
 
     /**
      * El metodo getSaldo consulta el atributo saldo de la clase CCuenta y lo devuleve como parametro.
-     * @return the saldo
+     * @return  saldo, cantidad actual de dinero en CCuenta.
      */
     public double getSaldo() {
         return saldo;
@@ -91,8 +92,9 @@ public class CCuenta {
 
     /**
      * El metodo ingresar, ingresa la cantidad pasada como parametro y actualiza el saldo.
-     * @param cantidad, cantidad de dinero a ingresar en la cuenta.
-     * @throws Exception, en caso de que la cantidad de dinero sea una numero negativa
+     * @param cantidad, cantidad de dinero a ingresar en la cuenta, tipo double
+     * @throws Exception 
+     * En caso de que la cantidad de dinero sea una numero negativa
      */
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
@@ -103,9 +105,10 @@ public class CCuenta {
 
     /**
      * El metodo retirar, resta la cantidad pasada como parametro y actualiza el saldo.
-     * @param cantidad, cantidad de dinero a retirar de la cuenta.
-     * @throws Exception, si la cantidad de dinero que pasa como parametro es negativa
-     * @throws Exception, si la cantidad de dinero que pasa como parametro es superior a la cantidad de saldo de la cuenta.
+     * @param cantidad, cantidad de dinero a retirar de la cuenta, tipo double
+     * @throws Exception
+     * Si la cantidad de dinero que pasa como parametro es negativa
+     * Si la cantidad de dinero que pasa como parametro es superior a la cantidad de saldo de la cuenta.
      */
     public void retirar(double cantidad) throws Exception {
         if (cantidad <= 0)
