@@ -4,10 +4,10 @@ package com.mycompany.ud4_te1;
 public class Main {
 
     public static void main(String[] args) {
-        operativaCuenta();
+        operativaCuenta(2300.0);
     }
 
-    public static void operativaCuenta() {
+    public static void operativaCuenta(double cantidad) {
         CCuenta cuentaTrabajo;
         double saldoActual;
 
@@ -17,7 +17,7 @@ public class Main {
 
         try {
             System.out.println("Cargo en cuenta");
-            cuentaTrabajo.retirar(2300);
+            cuentaTrabajo.retirar(cantidad);
             System.out.println("El nuevo saldo es: " + cuentaTrabajo.estado());
         } catch (Exception e) {
             System.out.print("Fallo al retirar");
